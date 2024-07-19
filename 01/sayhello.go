@@ -5,7 +5,7 @@ import (
 )
 
 func main () {
-	var name =  "Kristil"
-	var welcome = "Hello,%s\n"
+	name :=  "Kristil"
+	welcome := "Hello,%s\n"
 	fmt.Printf(welcome,name)
 }
