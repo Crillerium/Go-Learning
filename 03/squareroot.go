@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math"
+	"strconv"
 )
 
 func squareroot(num float64) float64 {
@@ -10,14 +11,15 @@ func squareroot(num float64) float64 {
 }
 
 func main () {
-	var input float64
+	var input string
 	for true {
 		fmt.Printf("请输入要开平方的数字:")
-		_ ,err := fmt.Scanf("%f",&input)
+		_ ,err := fmt.Scanln(&input)
 		if err != nil {
 			fmt.Println("错误,请输入一个有效数字!")
 			continue
 		}
-		fmt.Printf("%v 的平方根为 %v\n",input,squareroot(input))
+		in,err := strconv.ParseFloat(input,64)
+		fmt.Printf("%v 的平方根为 %v\n",input,squareroot(in))
 	}
 }
