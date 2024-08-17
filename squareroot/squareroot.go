@@ -16,10 +16,10 @@ func main () {
 		fmt.Printf("请输入要开平方的数字:")
 		_ ,err := fmt.Scanln(&input)
 		if err != nil {
-			fmt.Println("错误,请输入一个有效数字!")
+			fmt.Println("错误,请输入一个有效的数字!")
 			continue
 		}
 		in,err := strconv.ParseFloat(input,64)
-		fmt.Printf("%v 的平方根为 %v\n",input,squareroot(in))
+		fmt.Printf("%v 的平方根计算得 %v\n",input,squareroot(in))
 	}
 }
